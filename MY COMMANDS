@@ -1,0 +1,31 @@
+COMMANDS
+
+ssh paolo@192.168.0.38 --> connect so server
+
+yt --transcript "https://www.youtube.com/watch?v=0Td_zS2KKJs" > test.txt --> trascrizione di un video youtube e salvataggio in un file.txt
+
+ vi  ~/.config/fabric/.env  --> cambiare API enviromnent
+
+ more  ~/.config/fabric/.env --> visualizzare API enviromnent
+
+
+ fabric --model mistral:latest --pattern clean_text --text ./My_PDF_File.pdf --remoteOllamaServer http://localhost:11434/v1   --> utilizzo di Fabric con il pattern clean text per pulire e formattare un file o pdf o txt dal server di Ollama 
+
+ wc -w result2.txt   --> conta le parole in result2.txt 
+
+
+ yt "https://www.youtube.com/watch?v=RhGxIuQJX3Q" | fabric -p clean_text --remoteOllamaServer http://localhost:11434/v1  --> effettua trascrizione e poi il comando di pattern pulizia con server Ollama
+
+head -n 1000 prova.txt | tr ' ' '\n' | head -n 1000 | tr '\n' ' '  --> serve per estrarre le prime 1000 parole dal file prova.txt
+
+fabric --model mistral:latest --pattern clean_text --text "" --remoteOllamaServer http://localhost:11434/v1 > "name_file.txt"   -->clean text dove al posto del file inseriamo il testo tra apici " " e poi lo salviamo su un file in questo caso txt
+
+ wc -l test.txt   "da vedere"
+ wc -n test.txt   "da vedere"
+ wc -w test.txt   "da vedere"
+
+touch test.txt    "da vedere"
+
+
+
+
